@@ -1,0 +1,70 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Inheritance</title>
+</head>
+<body>
+    <script>
+        class Relasi{
+            Message(name){
+                console.info(`Hello ${name} adalah ${this.name}`);
+            }
+        }
+
+        class Karyawan{
+            Message(name) {
+                console.info(`Hello ${name} adalah ${this.name}`);
+            }
+        }
+
+        class Manager extends Karyawan{
+            Message(name) {
+                console.info(`Hello ${name} adalah ${this.name}`);
+            }
+        }
+
+        class CEO extends Manager{
+            Message(name){
+                console.info(`Hello ${name} adalah ${this.name}`);
+            }
+        }
+
+        const call_relasi = new Relasi();
+        call_relasi.name = "Relasi";
+        call_relasi.Message('Jeki');
+
+        const call_Karyawan = new Karyawan();
+        call_Karyawan.name = "Karyawan";
+        call_Karyawan.Message('Zack');
+
+        const call_Manager = new Manager();
+        call_Manager.name = "Manager";
+        call_Manager.Message('Kenn');
+
+        const call_CEO = new CEO();
+        call_CEO.name = "CEO";
+        call_CEO.Message('Ryu');
+
+        console.info(call_Karyawan);
+        console.info(call_Manager);
+        console.info(call_CEO);
+        console.info(call_relasi);
+    </script>
+</body>
+</html>
