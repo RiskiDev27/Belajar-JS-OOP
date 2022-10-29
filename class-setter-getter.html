@@ -1,0 +1,67 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Setter Getter JS</title>
+</head>
+<body>
+    <script>
+        
+        class Person {
+            constructor(firstname, lastname){
+                this.firstname = firstname;
+                this.lastname = lastname;
+            }
+
+            get FullName(){
+                return `${this.firstname} ${this.lastname}`;
+            }
+
+            set FullName(value){
+                const result = value.split(" ");
+                this.firstname = result[0];
+                this.lastname = result[1];
+            }
+        }
+
+        class listGame{
+            constructor(name_Game, category_game){
+                this.name_Game = name_Game;
+                this.category_game = category_game;
+            }
+
+            get game(){
+                return `Saya sedang bermain game ${this.name_Game} yang bercategory ${this.category_game}.`;
+            }
+
+            set game(value){
+                const result = value.split(" ");
+                this.name_Game = result[0];
+                this.category_game = result[1];
+            }
+        }
+        //pemanggilan
+        const call = new Person("Jupri", "Hafani");
+        console.info(call);
+        console.info(call.FullName);
+
+        const call_game = new listGame("Minecraft", "Survival");
+        console.info(call_game);
+        console.info(call_game.game);
+    </script>
+</body>
+</html>
