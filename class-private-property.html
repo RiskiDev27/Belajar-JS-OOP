@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Private Property</title>
+</head>
+<body>
+    <script>
+
+        class Person {
+            constructor(name){
+                this.name = name;
+            }
+        }
+
+        class Game {
+            constructor(name_Game){
+                this.name_Game = name_Game;
+            }
+        }
+
+        const call_name = new Person("Riski");
+        console.info(call_name);
+        console.info(call_name.name);
+
+        const call_game = new Game("Minecraft");
+        console.info(call_game);
+        console.info(call_game.name_Game);
+    </script>
+</body>
+</html>
